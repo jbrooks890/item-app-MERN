@@ -2,37 +2,68 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --faint: hsl(0,0%,95%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav a {
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background-color: var(--faint);
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-block: 1rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+form label {
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input {
+  display: block;
+}
+
+form input::placeholder{
+  color: silver;
+  font-style: italic;
+}
+
+#item-list ul {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  margin: 0 auto;
+  /* align-items: center; */
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#item-list ul a:not(:last-of-type){
+  margin-bottom: 1rem;
+}
+
+
+#item-list ul li {
+  padding: 0.5em;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+#item-list ul li:hover {
+  background-color: var(--faint);
 }
