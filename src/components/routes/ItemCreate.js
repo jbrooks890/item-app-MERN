@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import ItemForm from "../shared/ItemForm";
+import apiUrl from "../../config";
 
 const ItemCreate = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const ItemCreate = () => {
     link: "",
   });
   const [createdItem, setCreatedItem] = useState(null);
-  const ITEM_LINK = `http://localhost:3000/api/items`;
+  const ITEM_LINK = `${apiUrl}/items/${id}`;
 
   const handleChange = (e) => {
     const updatedField = { [e.target.name]: e.target.value };

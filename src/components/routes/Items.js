@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import apiUrl from "../../config";
 
 const Items = () => {
   const [items, setItems] = useState([]);
 
   const fetchData = async () => {
     try {
-      const response = await axios("http://localhost:3000/api/items");
+      const response = await axios(`${apiUrl}/items`);
       console.log(response);
       setItems(response.data.items);
     } catch (err) {

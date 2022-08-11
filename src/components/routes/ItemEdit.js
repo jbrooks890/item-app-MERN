@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import ItemForm from "../shared/ItemForm";
+import apiUrl from "../../config";
 
 const ItemEdit = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const ItemEdit = () => {
     link: "",
   });
   const [updated, setUpdated] = useState(false);
-  const ITEM_LINK = `http://localhost:3000/api/items/${id}`;
+  const ITEM_LINK = `${apiUrl}/items/${id}`;
 
   useEffect(() => {
     const fetchData = async () => {
