@@ -13,7 +13,7 @@ const ItemCreate = () => {
     link: "",
   });
   const [createdItem, setCreatedItem] = useState(null);
-  const ITEM_LINK = `${apiUrl}/items/${id}`;
+  const ITEM_LINK = `${apiUrl}/items`;
 
   const handleChange = (e) => {
     const updatedField = { [e.target.name]: e.target.value };
